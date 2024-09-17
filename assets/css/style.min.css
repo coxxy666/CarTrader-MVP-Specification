@@ -1,23 +1,5 @@
 @charset "UTF-8";
-/**
- * 1. Config
- * 2. Mixins
- * 3. Plugins
- * 4. Base
- * 5. Components
- * 6. Header
- * 7. Footer
- * 8. Pages
- */
-/* 1. Config */
-/*----------------------------------------
-    Variables
------------------------------------------*/
-/* 2. Mixins */
-/* 3. Base */
-/*----------------------------------------
-    Base
------------------------------------------*/
+
 *, ::after, ::before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
@@ -120,6 +102,33 @@ img {
      object-fit: cover;
   vertical-align: middle;
 }
+
+.video-popup {
+  display: flex;
+  max-width: 78rem;
+  padding: 8.1rem 4.8rem;
+  margin: auto;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden; /* Ensures the video doesn't overflow */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Makes sure the video stays in the background */
+}
+
+.video-content {
+  position: relative;
+  z-index: 1; /* Ensures the content appears above the video */
+  color: white; /* Adjust text color to make it readable over the video */
+}
+
 
 table {
   width: 100%;
@@ -7097,6 +7106,16 @@ blockquote {
 .w-icon-youtube:before {
   content: "";
 }
+.w-icon-github::before {
+  content: '\f09b';
+  font-family: 'FontAwesome';
+}
+
+.icon-github:before {
+  content: "";
+}
+
+
 
 .w-icon-pinterest:before {
   content: "";
